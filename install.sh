@@ -63,9 +63,9 @@ variable_set() {
     fi
 }
 
-cpif() {
+lnif() {
     if [ -e "$1" ]; then
-        cp -f "$1" "$2"
+        ln -sf "$1" "$2"
     fi
     ret="$?"
     debug
@@ -106,11 +106,14 @@ sync_repo() {
     debug
 }
 
-do_copy() {
-    cpif "$1" "$2"
+create_symlinks() {
+    local source_path="$1"
+    local target_path="$2"
+
+    lnif "$source_path/vimrc"         "$target_path/.vimrc"
 
     ret="$?"
-    success "Successfully copy."
+    success "Setting up vim symlinks."
     debug
 }
 
@@ -131,7 +134,7 @@ sync_repo       "$HOME/.vim/bundle/Vundle.vim" \
                 "$VUNDLE_URI" \
                 "vundle"
 
-do_copy         "$APP_PATH/vimrc" \
-                "$HOME/.vimrc"
+create_symlinks "$APP_PATH" \
+		"$HOME"
 
 msg             "\nThanks for installing $app_name."
