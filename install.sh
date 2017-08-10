@@ -130,7 +130,7 @@ sync_repo       "$APP_PATH" \
                 "$REPO_URI" \
                 "$app_name"
 
-sync_repo       "$HOME/.vim/bundle/vundle" \
+sync_repo       "$HOME/.vim/bundle/Vundle.vim" \
                 "$VUNDLE_URI" \
                 "vundle"
 
