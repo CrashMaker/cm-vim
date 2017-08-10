@@ -110,7 +110,7 @@ create_symlinks() {
     local source_path="$1"
     local target_path="$2"
 
-    lnif "$source_path/.vimrc"         "$target_path/.vimrc"
+    lnif "$source_path/vimrc"         "$target_path/.vimrc"
 
     ret="$?"
     success "Setting up vim symlinks."
