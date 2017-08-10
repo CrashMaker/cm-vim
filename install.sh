@@ -63,6 +63,14 @@ variable_set() {
     fi
 }
 
+lnif() {
+    if [ -e "$1" ]; then
+        ln -sf "$1" "$2"
+    fi
+    ret="$?"
+    debug
+}
+
 ############################ SETUP FUNCTIONS
 do_backup() {
     if [ -e "$1" ] || [ -e "$2" ] || [ -e "$3" ]; then
@@ -98,6 +106,17 @@ sync_repo() {
     debug
 }
 
+create_symlinks() {
+    local source_path="$1"
+    local target_path="$2"
+
+    lnif "$source_path/.vimrc"         "$target_path/.vimrc"
+
+    ret="$?"
+    success "Setting up vim symlinks."
+    debug
+}
+
 ############################ MAIN()
 variable_set "$HOME"
 program_must_exist "vim"
@@ -114,5 +133,8 @@ sync_repo       "$APP_PATH" \
 sync_repo       "$HOME/.vim/bundle/vundle" \
                 "$VUNDLE_URI" \
                 "vundle"
+
+create_symlinks "$APP_PATH" \
+                "$HOME"
 
 msg             "\nThanks for installing $app_name."
