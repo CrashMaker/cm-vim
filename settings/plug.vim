@@ -11,7 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " 以下为需要安装的插件
-Plugin 'altercation/solarized'
+Plugin 'altercation/vim-colors-solarized'
 
 " 你的所有插件需要在下面这行之前
 call vundle#end()            " 必须
