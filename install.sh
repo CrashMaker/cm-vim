@@ -72,18 +72,6 @@ lnif() {
 }
 
 ############################ SETUP FUNCTIONS
-do_backup() {
-    if [ -e "$1" ] || [ -e "$2" ] || [ -e "$3" ]; then
-        msg "Attempting to back up your original vim configuration."
-        today=`date +%Y%m%d_%s`
-        for i in "$1" "$2" "$3"; do
-            [ -e "$i" ] && [ ! -L "$i" ] && mv -v "$i" "$i.$today";
-        done
-        ret="$?"
-        success "Your original vim configuration has been backed up."
-        debug
-   fi
-}
 
 sync_repo() {
     local repo_path="$1"
@@ -121,10 +109,6 @@ create_symlinks() {
 variable_set "$HOME"
 program_must_exist "vim"
 program_must_exist "git"
-
-do_backup       "$HOME/.vim" \
-                "$HOME/.vimrc" \
-                "$HOME/.gvimrc"
 
 sync_repo       "$APP_PATH" \
                 "$REPO_URI" \
