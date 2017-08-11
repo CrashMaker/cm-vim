@@ -1,3 +1,3 @@
-for f in split(glob('$HOME/.cm-vim/*.vim'), '\n')
+for f in split(glob('$HOME/.cm-vim/config/*.vim'), '\n')
   exe 'source' f
 endfor
