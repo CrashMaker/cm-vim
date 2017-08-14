@@ -1,3 +1,9 @@
-for f in split(glob('$HOME/.cm-vim/config/*.vim'), '\n')
-  exe 'source' f
-endfor
+" 插件包
+if filereadable(expand("~/.cm-vim/config/plug.vim"))
+        source ~/.vimrc.before
+endif
+
+" 一般配置
+if filereadable(expand("~/.cm-vim/config/general.vim"))
+        source ~/.vimrc.bundles
+endif
