@@ -14,6 +14,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " 你的所有插件需要在下面这行之前
 call vundle#end()            " 必须
