@@ -122,7 +122,7 @@ variable_set "$HOME"
 program_must_exist "vim"
 program_must_exist "git"
 
-do_backup       "$HOME/.vim" \
+do_remove       "$HOME/.vim" \
                 "$HOME/.cm-vim"
 
 sync_repo       "$APP_PATH" \
