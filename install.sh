@@ -73,6 +73,18 @@ lnif() {
 
 ############################ SETUP FUNCTIONS
 
+do_remove() {
+    if [ -e "$1" ] || [ -e "$2" ]; then
+        msg "Attempting to remove your original vim configuration."
+        for i in "$1" "$2"; do
+            [ -e "$i" ] && [ ! -L "$i" ] && rm -rf "$i";
+        done
+        ret="$?"
+        success "Your original vim configuration has been remove."
+        debug
+    fi
+}
+
 sync_repo() {
     local repo_path="$1"
     local repo_uri="$2"
@@ -110,6 +122,9 @@ variable_set "$HOME"
 program_must_exist "vim"
 program_must_exist "git"
 
+do_backup       "$HOME/.vim" \
+                "$HOME/.cm-vim"
+
 sync_repo       "$APP_PATH" \
                 "$REPO_URI" \
                 "$app_name"
@@ -119,6 +134,6 @@ sync_repo       "$HOME/.vim/bundle/Vundle.vim" \
                 "vundle"
 
 create_symlinks "$APP_PATH" \
-		"$HOME"
+                "$HOME"
 
 msg             "\nThanks for installing $app_name."
