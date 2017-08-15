@@ -21,10 +21,11 @@ set hlsearch
 set ignorecase
 
 " 关闭自动注释补全
-set formatoptions-=cro
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " solarized {
 
+    " 配色
     syntax enable
     set background=dark
     colorscheme solarized
@@ -33,7 +34,8 @@ set formatoptions-=cro
 
 " airline {
 
-    let g:airline#extensions#tabline#enabled = 1
-
+    " 关闭空白行提示
+    let g:airline#extensions#whitespace#enabled = 0
+    
 " }
 
