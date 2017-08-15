@@ -12,6 +12,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " 请将安装插件的命令放在vundle#begin和vundle#end之间.
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " 你的所有插件需要在下面这行之前
 call vundle#end()            " 必须

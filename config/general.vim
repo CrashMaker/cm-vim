@@ -1,14 +1,15 @@
-" 不备份文件
-set nobackup
-
 " 显示行号  
 set number
 
 " Tab大小
 set tabstop=4
+set softtabstop=4
 
 " 缩进大小
 set shiftwidth=4
+
+" 使用C/C++语言的自动缩进方式
+set cindent
 
 " 用space替代tab
 set expandtab
@@ -19,11 +20,20 @@ set hlsearch
 " 搜索忽略大小写
 set ignorecase
 
-" 显示光标位置
-set ruler
+" 关闭自动注释补全
+set formatoptions-=cro
 
-" solarized 配色
-syntax enable
-set background=dark
-colorscheme solarized
+" solarized {
+
+    syntax enable
+    set background=dark
+    colorscheme solarized
+
+" }
+
+" airline {
+
+    let g:airline#extensions#tabline#enabled = 1
+
+" }
 
