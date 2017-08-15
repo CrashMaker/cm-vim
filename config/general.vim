@@ -36,14 +36,12 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
     " 关闭空白行提示
     let g:airline#extensions#whitespace#enabled = 0
-    " 打开tabline
-    let g:airline#extensions#tabline#enabled = 1
     
 " }
 
 " ultisnips {
 
-    let g:UltiSnipsExpandTrigger="<s-tab>"    
+    let g:UltiSnipsExpandTrigger="<S-Tab>"    
 
 " }
 
