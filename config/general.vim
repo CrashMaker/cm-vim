@@ -1,4 +1,7 @@
-" 显示行号  
+" 设置leader为','
+let mapleader = ','
+
+" 显示行号
 set number
 
 " Tab大小
@@ -41,7 +44,12 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " ultisnips {
 
-    let g:UltiSnipsExpandTrigger="<S-Tab>"    
+    let g:UltiSnipsExpandTrigger="<D-j>"    
 
 " }
 
+" youcompleteme {
+
+    nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" }
