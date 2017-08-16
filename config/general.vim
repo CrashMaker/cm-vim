@@ -1,6 +1,3 @@
-" 设置leader为','
-let mapleader = ','
-
 " 显示行号
 set number
 
@@ -26,6 +23,20 @@ set ignorecase
 " 关闭自动注释补全
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" 设置leader为','
+let mapleader = ','
+
+" 自动补全括号
+inoremap ( <c-r>=AutoPair('(', ')')<CR>
+inoremap { <c-r>=AutoPair('{', '}')<CR>
+inoremap [ <c-r>=AutoPair('[', ']')<CR>
+inoremap " <c-r>=AutoPair('"', '"')<CR>
+inoremap ' <c-r>=AutoPair(''', ''')<CR>
+inoremap < <c-r>=AutoPair('<', '>')<CR>
+
+" 光标在{}中间的时候按回车自动换行
+inoremap <CR> <c-r>=AutoCR()<CR>
+
 " solarized {
 
     " 配色
@@ -44,7 +55,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " ultisnips {
 
-    let g:UltiSnipsExpandTrigger="<D-j>"    
+    let g:UltiSnipsExpandTrigger=['<D-n>', '<C-n>']    
 
 " }
 
