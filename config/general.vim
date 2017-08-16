@@ -61,7 +61,7 @@ inoremap <CR> <c-r>=AutoCR()<CR>
 
 " youcompleteme {
 
-    let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+    let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
     nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " }
