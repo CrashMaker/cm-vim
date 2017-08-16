@@ -5,7 +5,7 @@ endif
 
 " 函数
 if filereadable(expand("~/.cm-vim/config/func.vim"))
-        source ~/.cm-vim/config/general.vim
+        source ~/.cm-vim/config/func.vim
 endif
 
 " 一般配置
