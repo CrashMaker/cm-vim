@@ -31,7 +31,7 @@ inoremap ( <c-r>=AutoPair('(', ')')<CR>
 inoremap { <c-r>=AutoPair('{', '}')<CR>
 inoremap [ <c-r>=AutoPair('[', ']')<CR>
 inoremap " <c-r>=AutoPair('"', '"')<CR>
-inoremap ' <c-r>=AutoPair(''', ''')<CR>
+inoremap ' <c-r>=AutoPair("'", "'")<CR>
 inoremap < <c-r>=AutoPair('<', '>')<CR>
 
 " 光标在{}中间的时候按回车自动换行
