@@ -11,7 +11,7 @@ endf
 " 光标在{}中间的时候按回车自动换行
 function AutoCR()
   let line = getline('.')
-  if line[col('.') + 1] == '{' || line[col('.') - 1] == '}'
+  if line[col('.') + 2] == '{' || line[col('.') - 1] == '}'
     return "\<CR>\<ESC>O" 
   else
     return "\<CR>"
