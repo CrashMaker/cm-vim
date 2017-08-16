@@ -12,7 +12,7 @@ endf
 function AutoCR()
   let line = getline('.')
   if line[col('.') + 1] == '{' || line[col('.') - 1] == '}'
-    return "\<CR>\<CR>\<ESC>O" 
+    return "\<CR>\<ESC>O" 
   else
     return "\<CR>"
   endif
