@@ -41,7 +41,7 @@ inoremap <CR> <c-r>=AutoCR()<CR>
 
     " 配色
     syntax enable
-    set background=dark
+    set background = dark
     colorscheme solarized
 
 " }
@@ -55,7 +55,7 @@ inoremap <CR> <c-r>=AutoCR()<CR>
 
 " ultisnips {
 
-    let g:UltiSnipsExpandTrigger=["<D-'>", "<C-'>"]    
+    let g:UltiSnipsExpandTrigger = "<D-'>"    
 
 " }
 
