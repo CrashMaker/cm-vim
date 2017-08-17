@@ -24,7 +24,7 @@ set ignorecase
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " 设置leader为','
-let mapleader = ','
+let mapleader=','
 
 " 自动补全括号
 inoremap ( <c-r>=AutoPair('(', ')')<CR>
@@ -41,7 +41,7 @@ inoremap <CR> <c-r>=AutoCR()<CR>
 
     " 配色
     syntax enable
-    set background = dark
+    set background=dark
     colorscheme solarized
 
 " }
@@ -49,19 +49,19 @@ inoremap <CR> <c-r>=AutoCR()<CR>
 " airline {
 
     " 关闭空白行提示
-    let g:airline#extensions#whitespace#enabled = 0
+    let g:airline#extensions#whitespace#enabled=0
     
 " }
 
 " ultisnips {
 
-    let g:UltiSnipsExpandTrigger = "<D-'>"    
+    let g:UltiSnipsExpandTrigger="<D-'>"    
 
 " }
 
 " youcompleteme {
 
-    let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+    let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
     nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " }
