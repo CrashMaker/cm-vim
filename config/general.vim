@@ -55,7 +55,7 @@ inoremap <CR> <c-r>=AutoCR()<CR>
 
 " ultisnips {
 
-    let g:UltiSnipsExpandTrigger=['<D-n>', '<C-n>']    
+    let g:UltiSnipsExpandTrigger=["<D-'>", "<C-'>"]    
 
 " }
 
