@@ -74,6 +74,5 @@ imap <CR> <c-r>=AutoCR()<CR>
     nmap <D-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>
     imap <D-j> <ESC>:YcmCompleter GoToDefinitionElseDeclaration<CR>i
     let g:ycm_key_list_stop_completion = ['<D-y>']
-    let g:ycm_key_invoke_completion = '<D-u>'
 
 " }
