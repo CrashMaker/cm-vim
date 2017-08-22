@@ -38,7 +38,10 @@ imap { <c-r>=AutoPair('{', '}')<CR>
 imap [ <c-r>=AutoPair('[', ']')<CR>
 imap " <c-r>=AutoPair('"', '"')<CR>
 imap ' <c-r>=AutoPair("'", "'")<CR>
-imap < <c-r>=AutoPair('<', '>')<CR>
+
+" 运行程序
+imap <D-r> <ESC>:./a<CR>
+nmap <D-r> :./a<CR>
 
 " 光标在{}中间的时候按回车自动换行
 imap <CR> <c-r>=AutoCR()<CR>
@@ -68,6 +71,7 @@ imap <CR> <c-r>=AutoCR()<CR>
 " youcompleteme {
 
     let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-    nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    nmap <D-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    imap <D-j> <ESC>:YcmCompleter GoToDefinitionElseDeclaration<CR>i
 
 " }
