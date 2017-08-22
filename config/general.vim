@@ -73,5 +73,7 @@ imap <CR> <c-r>=AutoCR()<CR>
     let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
     nmap <D-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>
     imap <D-j> <ESC>:YcmCompleter GoToDefinitionElseDeclaration<CR>i
+    let g:ycm_key_list_stop_completion = ['<D-y>']
+    let g:ycm_key_invoke_completion = '<D-u>'
 
 " }
