@@ -23,6 +23,9 @@ set ignorecase
 " 关闭自动注释补全
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" 设置leader
+let mapleader=' '
+
 " 映射ESC键
 imap ;j <ESC>
 
@@ -44,6 +47,9 @@ imap <CR> <c-r>=AutoCR()<CR>
 
 " 运行程序
 map <D-r> :!./a<CR>
+
+" 切换窗口
+map <D-1> <C-w>
 
 " solarized {
 
@@ -71,14 +77,20 @@ map <D-r> :!./a<CR>
 
     let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
     let g:ycm_key_list_stop_completion=['<D-y>']
-    map <D-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    map <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " }
 
 " nerdtree {
 
-    autocmd StdinReadPre * let s:std_in=1
-    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+    autocmd vimenter * NERDTree
     map <C-n> :NERDTreeToggle<CR>
 
 " }
+
+" nerdcommenter {
+
+    
+
+" }
+ 
