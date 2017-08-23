@@ -39,12 +39,11 @@ imap [ <c-r>=AutoPair('[', ']')<CR>
 imap " <c-r>=AutoPair('"', '"')<CR>
 imap ' <c-r>=AutoPair("'", "'")<CR>
 
-" 运行程序
-imap <D-r> <ESC>:./a<CR>
-nmap <D-r> :./a<CR>
-
 " 光标在{}中间的时候按回车自动换行
 imap <CR> <c-r>=AutoCR()<CR>
+
+" 运行程序
+map <D-r> :!./a<CR>
 
 " solarized {
 
@@ -71,8 +70,15 @@ imap <CR> <c-r>=AutoCR()<CR>
 " youcompleteme {
 
     let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-    nmap <D-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-    imap <D-j> <ESC>:YcmCompleter GoToDefinitionElseDeclaration<CR>i
-    let g:ycm_key_list_stop_completion = ['<D-y>']
+    let g:ycm_key_list_stop_completion=['<D-y>']
+    map <D-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" }
+
+" nerdtree {
+
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+    map <C-n> :NERDTreeToggle<CR>
 
 " }
