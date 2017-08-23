@@ -38,8 +38,11 @@ imap ¬ <Right>
 " 运行程序
 map <D-r> :!./a<CR>
 
-" 切换窗口
-map <D-1> <C-w>
+" 切换窗口(上一个)
+map <D-1> <C-w>p
+
+" 切换窗口(下一个)
+map <D-2> <C-w>w
 
 " solarized {
 
@@ -67,7 +70,6 @@ map <D-1> <C-w>
 
     let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
     let g:ycm_key_list_stop_completion=['<D-y>']
-    let g:ycm_key_list_previous_completion = ['<D-u>', '<Up>']
     map <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " }
@@ -88,9 +90,8 @@ map <D-1> <C-w>
 
 " }
 
-" delimitmate {
+" autopairs {
 
-    let g:delimitMate_expand_cr = 1
+    let g:AutoPairsShortcutToggle='<C-k>'
 
 " }
- 
