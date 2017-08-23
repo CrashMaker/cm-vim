@@ -35,16 +35,6 @@ imap ∆ <Down>
 imap ˚ <Up>
 imap ¬ <Right>
 
-" 自动补全括号
-imap ( <c-r>=AutoPair('(', ')')<CR>
-imap { <c-r>=AutoPair('{', '}')<CR>
-imap [ <c-r>=AutoPair('[', ']')<CR>
-imap " <c-r>=AutoPair('"', '"')<CR>
-imap ' <c-r>=AutoPair("'", "'")<CR>
-
-" 光标在{}中间的时候按回车自动换行
-imap <CR> <c-r>=AutoCR()<CR>
-
 " 运行程序
 map <D-r> :!./a<CR>
 
@@ -77,6 +67,7 @@ map <D-1> <C-w>
 
     let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
     let g:ycm_key_list_stop_completion=['<D-y>']
+    let g:ycm_key_list_previous_completion = ['<D-u>', '<Up>']
     map <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " }
@@ -90,7 +81,16 @@ map <D-1> <C-w>
 
 " nerdcommenter {
 
-    
+    let g:NERDSpaceDelims = 1
+    let g:NERDCompactSexyComs = 1
+    let g:NERDDefaultAlign = 'left'
+    let g:NERDCommentEmptyLines = 1
+
+" }
+
+" delimitmate {
+
+    let g:delimitMate_expand_cr = 1
 
 " }
  
