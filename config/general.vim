@@ -26,15 +26,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " 设置leader
 let mapleader=' '
 
-" 映射ESC键
-imap ;j <ESC>
-
-" 映射上下左右键
-imap ˙ <Left>
-imap ∆ <Down>
-imap ˚ <Up>
-imap ¬ <Right>
-
 " 运行程序
 map <D-r> :!./a<CR>
 
@@ -43,6 +34,12 @@ map <D-1> <C-w>p
 
 " 切换窗口(下一个)
 map <D-2> <C-w>w
+
+" 映射上下左右
+imap <C-h> <Right>
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-l> <Down>
 
 " solarized {
 
@@ -60,16 +57,11 @@ map <D-2> <C-w>w
     
 " }
 
-" ultisnips {
-
-    let g:UltiSnipsExpandTrigger="<D-'>"    
-
-" }
-
 " youcompleteme {
 
     let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-    let g:ycm_key_list_stop_completion=['<D-y>']
+    let g:ycm_key_list_select_completion = ['<Down>']
+    let g:ycm_key_list_previous_completion = ['<Up>']
     map <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " }
@@ -92,6 +84,6 @@ map <D-2> <C-w>w
 
 " autopairs {
 
-    let g:AutoPairsShortcutToggle='<C-k>'
+    let g:AutoPairsShortcutToggle='<C-9>'
 
 " }

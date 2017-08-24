@@ -20,6 +20,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'kien/ctrlp.vim'
 
 " 你的所有插件需要在下面这行之前
 call vundle#end()            " 必须
