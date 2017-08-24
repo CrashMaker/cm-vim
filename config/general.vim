@@ -72,6 +72,6 @@ map <D-r> :!./a<CR>
 
 " autopairs {
 
-    let g:AutoPairsShortcutToggle='<C-,>'
+    let g:AutoPairsShortcutToggle='<C-]>'
 
 " }
