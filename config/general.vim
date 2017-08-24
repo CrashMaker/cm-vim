@@ -24,10 +24,13 @@ set ignorecase
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " 设置leader
-let mapleader=' '
+let mapleader='\'
+
+" 编译程序
+map <F5> :!make<CR>
 
 " 运行程序
-map <D-r> :!./a<CR>
+map <F6> :!./a<CR>
 
 " solarized {
 
