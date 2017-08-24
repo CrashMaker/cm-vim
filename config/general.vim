@@ -57,7 +57,7 @@ map <D-r> :!./a<CR>
 " nerdtree {
 
     autocmd vimenter * NERDTree
-    map <C-n> :NERDTreeToggle<CR>
+    map <leader>nt :NERDTreeToggle<CR>
 
 " }
 
@@ -75,3 +75,13 @@ map <D-r> :!./a<CR>
     let g:AutoPairsShortcutToggle='<C-]>'
 
 " }
+
+" tagbar {
+
+    let g:tagbar_ctags_bin='/usr/local/bin/ctags'
+    map <leader>tb :TagbarToggle<CR>
+    let g:tagbar_width=30
+    autocmd FileType c,cpp nested :TagbarOpen 
+
+" }
+
