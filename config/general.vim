@@ -79,9 +79,15 @@ map <D-r> :!./a<CR>
 " tagbar {
 
     let g:tagbar_ctags_bin='/usr/local/bin/ctags'
-    map <leader>tb :TagbarToggle<CR>
     let g:tagbar_width=30
-    autocmd FileType c,cpp nested :TagbarOpen 
+    autocmd FileType c,cpp nested :TagbarOpen
+    map <leader>tb :TagbarToggle<CR>
 
 " }
 
+" a.vim {
+
+    map <leader>aa :A<CR>
+    map <leader>as :AS<CR>
+
+"}
