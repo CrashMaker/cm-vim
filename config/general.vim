@@ -29,18 +29,6 @@ let mapleader=' '
 " 运行程序
 map <D-r> :!./a<CR>
 
-" 切换窗口(上一个)
-map <D-1> <C-w>p
-
-" 切换窗口(下一个)
-map <D-2> <C-w>w
-
-" 映射上下左右
-imap <C-h> <Right>
-imap <C-j> <Down>
-imap <C-k> <Up>
-imap <C-l> <Down>
-
 " solarized {
 
     " 配色
@@ -60,8 +48,8 @@ imap <C-l> <Down>
 " youcompleteme {
 
     let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-    let g:ycm_key_list_select_completion = ['<Down>']
-    let g:ycm_key_list_previous_completion = ['<Up>']
+    let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+    let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
     map <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " }
@@ -84,6 +72,6 @@ imap <C-l> <Down>
 
 " autopairs {
 
-    let g:AutoPairsShortcutToggle='<C-9>'
+    let g:AutoPairsShortcutToggle='<C-,>'
 
 " }
