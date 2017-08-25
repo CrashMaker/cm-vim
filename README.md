@@ -7,7 +7,9 @@
     curl https://bit.ly/cm-vim -L > cm-vim.sh && sh cm-vim.sh
 ```
 然后在MacVim下运行
+```bash
     :PluginInstall
+```
 
 ## 所需的软件(请按顺序进行安装)
 ### Homebrew
