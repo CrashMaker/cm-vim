@@ -1,5 +1,5 @@
 # cm-vim
-这是一个在Mac OSX系统下MacVim的C++开发配置。
+这是一个在Mac OSX系统下MacVim的C++开发配置。将Makefile文件拷贝到项目的根目录可以实现编译运行功能。
 
 ## 安装
 先在终端运行
