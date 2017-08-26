@@ -34,7 +34,7 @@
 
 ## YouCompleteMe编译命令
 ```bash
-    cd ~/.vim/bundle/YouCompleteMd
+    cd ~/.vim/bundle/YouCompleteMe
     ./install.py --clang-completer
 ```
 
