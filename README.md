@@ -19,7 +19,7 @@
 
 ### MacVim
 ```bash
-    brew install macvim
+    brew install macvim --with-python
 ```
 
 ### CMake
