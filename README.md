@@ -19,7 +19,7 @@
 
 ### MacVim
 ```bash
-    brew install macvim
+    brew install macvim --with-python
 ```
 
 ### CMake
@@ -32,9 +32,14 @@
     brew install ctags
 ```
 
+### Ack
+```bash
+    brew install ack
+```
+
 ## YouCompleteMe编译命令
 ```bash
-    cd ~/.vim/bundle/YouCompleteMd
+    cd ~/.vim/bundle/YouCompleteMe
     ./install.py --clang-completer
 ```
 
