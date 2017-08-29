@@ -1,3 +1,6 @@
+" 窗口大小
+set lines=60 columns=180
+
 " 显示行号
 set number
 
@@ -92,5 +95,11 @@ map <F6> :!./a<CR>
 
     map <leader>aa :A<CR>
     map <leader>as :AS<CR>
+
+"}
+
+" ack.vim {
+
+    map <leader>ff :Ack!<Space>
 
 "}

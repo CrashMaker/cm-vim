@@ -23,6 +23,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-scripts/a.vim'
+Plugin 'mileszs/ack.vim'
 
 " 你的所有插件需要在下面这行之前
 call vundle#end()            " 必须
