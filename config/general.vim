@@ -26,6 +26,9 @@ set ignorecase
 " 关闭自动注释补全
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" 当新建 .h .cpp文件时自动调用SetTitle函数添加注释头  
+autocmd BufNewFile *.h,*.cpp exec ":call SetTitle()"
+
 " 设置leader
 let mapleader='\'
 
