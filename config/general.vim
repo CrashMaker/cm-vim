@@ -23,6 +23,9 @@ set hlsearch
 " 搜索忽略大小写
 set ignorecase
 
+" 补全时不打开preview窗口
+set completeopt-=preview
+
 " 关闭自动注释补全
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
