@@ -21,7 +21,7 @@ func SetTitle()
         call append(line(".")+11, "")   
         call append(line(".")+12, "")   
         call append(line(".")+13, "")   
-        call append(line(".")+14, "#endif // ".toupper(expand("%:t:r"))."_H")   
+        call append(line(".")+14, "#endif /* ".toupper(expand("%:t:r"))."_H */")   
     elseif &filetype == 'cpp'   
         call append(line(".")+9, "#include \"".expand("%:t:r").".h\"")   
         call append(line(".")+10, "")
