@@ -41,12 +41,12 @@ map <F5> :!make<CR>
 " 运行程序
 map <F6> :!./a<CR>
 
-" solarized {
+" molokai {
 
     " 配色
     syntax enable
     set background=dark
-    colorscheme solarized
+    colorscheme molokai
 
 " }
 
