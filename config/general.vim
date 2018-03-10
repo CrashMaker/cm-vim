@@ -52,8 +52,11 @@ map <F6> :!./a<CR>
 
 " airline {
 
-    " 关闭空白行提示
-    let g:airline#extensions#whitespace#enabled=0
+    let g:airline_theme = 'molokai'
+    let g:airline#extensions#whitespace#enabled = 0
+    let g:airline#extensions#tabline#enabled = 1
+    map <leader>al :bn<CR>
+    map <leader>ah :bp<CR>
     
 " }
 
