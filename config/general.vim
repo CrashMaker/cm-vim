@@ -119,6 +119,8 @@ nnoremap <F6> :!./a<CR>
 
 " vim-bufkill {
 
-    nnoremap <C-b-q> :BD<cr>
+    nnoremap <C-S-x> :BD<cr>
+    nnoremap <C-S-n> :bp<cr>
+    nnoremap <C-S-m> :bn<cr>
 
 " }
