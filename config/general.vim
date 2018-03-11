@@ -33,13 +33,13 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd BufNewFile *.h,*.cpp exec ":call SetTitle()"
 
 " 设置leader
-let mapleader='\'
+let mapleader = '\'
 
 " 编译程序
-map <F5> :!make<CR>
+nnoremap <F5> :!make<CR>
 
 " 运行程序
-map <F6> :!./a<CR>
+nnoremap <F6> :!./a<CR>
 
 " molokai {
 
@@ -55,8 +55,6 @@ map <F6> :!./a<CR>
     let g:airline_theme = 'molokai'
     let g:airline#extensions#whitespace#enabled = 0
     let g:airline#extensions#tabline#enabled = 1
-    map <leader>al :bn<CR>
-    map <leader>ah :bp<CR>
     
 " }
 
@@ -65,14 +63,13 @@ map <F6> :!./a<CR>
     let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
     let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
     let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-    map <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " }
 
 " nerdtree {
 
     autocmd vimenter * NERDTree
-    map <leader>nt :NERDTreeToggle<CR>
 
 " }
 
@@ -96,20 +93,19 @@ map <F6> :!./a<CR>
     let g:tagbar_ctags_bin='/usr/local/bin/ctags'
     let g:tagbar_width=30
     autocmd FileType c,cpp nested :TagbarOpen
-    map <leader>tb :TagbarToggle<CR>
 
 " }
 
 " a.vim {
 
-    map <leader>aa :A<CR>
-    map <leader>as :AS<CR>
+    nnoremap <leader>aa :A<CR>
+    nnoremap <leader>as :AS<CR>
 
 " }
 
 " ack.vim {
 
-    map <leader>ff :Ack!<Space>
+    nnoremap <leader>ff :Ack!<Space>
 
 " }
 
@@ -118,5 +114,11 @@ map <F6> :!./a<CR>
     let g:cpp_class_scope_highlight = 1
     let g:cpp_member_variable_highlight = 1
     let g:cpp_class_decl_highlight = 1
+
+" }
+
+" vim-bufkill {
+
+    nnoremap <C-b-q> :BD<cr>
 
 " }
